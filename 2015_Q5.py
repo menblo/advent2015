@@ -1012,7 +1012,12 @@ test3 = [any(x in string for x in ['ab', 'cd', 'pq', 'xy']) for string in string
 
 n = len(strings)
 test = [(test1[i] and test2[i]) and test3[i] == False for i in range(n)]
-print(sum(test)))
+print(sum(test))
 
 #########################
+
+def string_pairs(st):
+    return [st[i] + st[i] for i in range(len(st)-1)]
+
+[string_pairs(st) for st in strings]
 
